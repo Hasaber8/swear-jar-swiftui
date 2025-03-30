@@ -128,7 +128,7 @@ struct Constants {
     // MARK: - URLs
     
     struct URLs {
-        /// Privacy policy URL
+        /// Privacy policy URL - dummy
         static let privacyPolicy = URL(string: "https://example.com/privacy")!
         
         /// Terms of service URL
