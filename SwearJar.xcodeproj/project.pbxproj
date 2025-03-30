@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3C0682192D98C64A0095709F /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 3CE4DABD2D98C4B100E11ECB /* GRDB */; };
+		3C06821A2D98C64A0095709F /* GRDB-dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3CE4DABF2D98C4B100E11ECB /* GRDB-dynamic */; };
+		3C0682802D98C7450095709F /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 3C06827F2D98C7450095709F /* GRDB */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3C11AEE62D96555300EB9CD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,6 +28,19 @@
 			remoteInfo = SwearJar;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C06827D2D98C72A0095709F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C11AED52D96555000EB9CD7 /* SwearJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwearJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0682802D98C7450095709F /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C06821A2D98C64A0095709F /* GRDB-dynamic in Frameworks */,
+				3C0682192D98C64A0095709F /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C06827E2D98C7450095709F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C11AECC2D96555000EB9CD7 = {
 			isa = PBXGroup;
 			children = (
 				3C11AED72D96555000EB9CD7 /* SwearJar */,
 				3C11AEE82D96555300EB9CD7 /* SwearJarTests */,
 				3C11AEF22D96555300EB9CD7 /* SwearJarUITests */,
+				3C06827E2D98C7450095709F /* Frameworks */,
 				3C11AED62D96555000EB9CD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +132,7 @@
 				3C11AED12D96555000EB9CD7 /* Sources */,
 				3C11AED22D96555000EB9CD7 /* Frameworks */,
 				3C11AED32D96555000EB9CD7 /* Resources */,
+				3C06827D2D98C72A0095709F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +143,7 @@
 			);
 			name = SwearJar;
 			packageProductDependencies = (
+				3C06827F2D98C7450095709F /* GRDB */,
 			);
 			productName = SwearJar;
 			productReference = 3C11AED52D96555000EB9CD7 /* SwearJar.app */;
@@ -135,6 +167,8 @@
 			);
 			name = SwearJarTests;
 			packageProductDependencies = (
+				3CE4DABD2D98C4B100E11ECB /* GRDB */,
+				3CE4DABF2D98C4B100E11ECB /* GRDB-dynamic */,
 			);
 			productName = SwearJarTests;
 			productReference = 3C11AEE52D96555300EB9CD7 /* SwearJarTests.xctest */;
@@ -195,6 +229,9 @@
 			);
 			mainGroup = 3C11AECC2D96555000EB9CD7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3CFC0C542D96800A00DF6D39 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3C11AED62D96555000EB9CD7 /* Products */;
 			projectDirPath = "";
@@ -558,6 +595,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CFC0C542D96800A00DF6D39 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C06827F2D98C7450095709F /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CFC0C542D96800A00DF6D39 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		3CE4DABD2D98C4B100E11ECB /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CFC0C542D96800A00DF6D39 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		3CE4DABF2D98C4B100E11ECB /* GRDB-dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CFC0C542D96800A00DF6D39 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = "GRDB-dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C11AECD2D96555000EB9CD7 /* Project object */;
 }
