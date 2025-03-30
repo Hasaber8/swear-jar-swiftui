@@ -50,7 +50,7 @@ class UserSettingsRepository {
                 try UserSettings.fetchOne(db, key: id)
             }
         } catch {
-            print("Error fetching settings by ID: \(error)")
+            print("Error fetching user settings by ID: \(error)")
             return nil
         }
     }

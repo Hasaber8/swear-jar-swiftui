@@ -352,7 +352,7 @@ class DailySummaryRepository {
                 }
                 
                 query += """
-                GROUP BY most_common_word_id
+                 GROUP BY most_common_word_id
                 ORDER BY frequency DESC
                 LIMIT 1
                 """

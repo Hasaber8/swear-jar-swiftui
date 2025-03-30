@@ -92,6 +92,13 @@ class UserViewModel: ObservableObject {
         return userService.getUserByUsername(username)
     }
     
+    /// Get a user by ID without setting it as the current user
+    /// - Parameter userId: The ID of the user to retrieve
+    /// - Returns: The user if found, nil otherwise
+    func getUserById(_ userId: Int) -> User? {
+        return userService.getUserDetails(userId: userId)
+    }
+    
     /// Get all users in the system
     /// - Returns: Array of all users
     func getAllUsers() -> [User] {

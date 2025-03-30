@@ -34,6 +34,13 @@ class UserRepository {
             try dbQueue.write { db in
                 try newUser.insert(db)
             }
+            
+            // If the ID is still nil after insert, try to fetch the user by username
+            if newUser.id == nil {
+                newUser = getByUsername(user.username) ?? newUser
+                print("DEBUG: After insert, user ID: \(newUser.id)")
+            }
+            
             return newUser
         } catch {
             print("Error creating user: \(error)")

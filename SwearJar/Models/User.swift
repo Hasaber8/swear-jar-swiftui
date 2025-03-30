@@ -113,6 +113,7 @@ extension User: FetchableRecord, TableRecord, PersistableRecord {
     
     /// Update the id after a successful insertion
     mutating func didInsert(_ inserted: InsertionSuccess) {
+        print("UserID is \(inserted.rowID)")
         id = Int(inserted.rowID)
     }
 }

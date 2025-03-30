@@ -45,7 +45,12 @@ class UserService {
         }
         
         // Create default settings for the user
-        let defaultSettings = UserSettings(userId: createdUser.id!)
+        guard let createdUserId = createdUser.id else {
+            print("Created user has no ID.")
+            return nil
+        }
+        
+        let defaultSettings = UserSettings(userId: createdUserId)
         guard userSettingsRepository.create(defaultSettings) != nil else {
             print("Failed to create user settings.")
             return nil
